@@ -1,0 +1,1 @@
+C:\Users\Admin\OneDrive\Documents\Self_study\Cpp\CPPfolder\personal\Mini-project\dust_sim.cpp -n 3 -st 60 -si 10
