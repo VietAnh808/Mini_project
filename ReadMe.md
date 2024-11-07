@@ -2,24 +2,30 @@
 
 ## 1. Task 1
 
-### 1.1. Basic Calculation
-- Input: 2 số nguyên (0 - 2^32-1). 1 phép toán [+,-,*,/]
-- Output: Kết quả (Phép tính = Kết quả)
-### 1.2. GCD
-- Input: 2 số nguyên dương (1 - 2^32-1)
-- Output: UCLN
-### 1.3. Exit
-- Thoát phần mềm
 
-## 2. Phiên bản
+## 2. Task 2
 
-### ***Phiên bản hiện tại: v1.0***
-- Tính năng
-    - Tính +,-,*,/
-    - Tính UCLN
-    - Thoát
-- Bugs
-    - Không xử lý được input lạ từ người dùng
-    - Chưa thể hiện logic code trong mã nguồn
-    - Mã nguồn chưa được sắp xếp có hệ thống
+### 2.1 Loc du lieu
+- tao chuong trinh xu li so lieu trong range tu 3-550.5
+- tao file outlier la file invalid data
+- tao file valid data
+### 2.2  
+- phan loai muc do concentration
+- viet vao file AQI.csv
+## 2.3 
+- viet chuong trinh tinh MAX, MIN, MEAN, MEDIAN cua tung senors
+- viet vao dust_summary.csv
+## 2.4
+- dua vao 2.2
+- tinh tong thoi gian AQI level cua tung sensors
+- viet vao dust_statistic.csv
+
+### 3. Task 3
+
+
+## **Requirement**
+
+- Exe time < 30 secs
+- store error in log file of each task
+
 

@@ -49,7 +49,7 @@ float generatePM25Value() {
 string formatTimestamp(time_t time) { //time_t type used to represent calendar time
     tm* time_info = localtime(&time);
     char buffer[20];
-    strftime(buffer, sizeof(buffer), "%Y-%m-%d %H:%M:%S", time_info); //his function formats date and time information according to a specified format.
+    strftime(buffer, sizeof(buffer), "%Y-%m-%d %H:%M:%S", time_info); //function formats date and time information according to a specified format.
     return buffer;
 }
 
@@ -57,7 +57,7 @@ string formatTimestamp(time_t time) { //time_t type used to represent calendar t
 void simulateSensorReadingsandWriting(int num_sensors, int sampling_time, int sim_interval) {
     ofstream file("./dust_sensor.csv");
     if (!file.is_open()) {
-        cout << "Failed to open file." <<endl;
+        cerr << "Failed to open file." <<endl;
         return;
     }
 
