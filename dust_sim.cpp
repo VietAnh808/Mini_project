@@ -49,7 +49,7 @@ float generatePM25Value() {
 string formatTimestamp(time_t time) { //time_t type used to represent calendar time
     tm* time_info = localtime(&time);
     char buffer[20];
-    strftime(buffer, sizeof(buffer), "%Y-%m-%d %H:%M:%S", time_info); //function formats date and time information according to a specified format.
+    strftime(buffer, sizeof(buffer), "%Y:%m:%d %H:%M:%S", time_info); //function formats date and time information according to a specified format.
     return buffer;
 }
 
@@ -61,19 +61,19 @@ void simulateSensorReadingsandWriting(int num_sensors, int sampling_time, int si
         return;
     }
 
-    file << "Sensor ID,Timestamp,PM2.5 Value\n";
+    file << "ID,Time,Value\n";
 
     time_t current_time = time(nullptr);// just return current time not assign to another var
     time_t start_time = current_time - (sim_interval * 3600); // Going back by sim_interval in hours
 
-    for (int sensor_id = 1; sensor_id <= num_sensors; ++sensor_id) {
-        for (time_t time = start_time; time <= current_time; time += sampling_time) {
+    for (time_t time = start_time; time <= current_time; time += sampling_time) {
+        for (int sensor_id = 1; sensor_id <= num_sensors; ++sensor_id) {
             float pm25_value = generatePM25Value();
             string timestamp = formatTimestamp(time);
 
             
-            file << "Sensor "<< sensor_id << "," << timestamp << "," << fixed << setprecision(1)
-                 << pm25_value << " μg/m^3\n";
+            file << sensor_id << "," << timestamp << "," << fixed << setprecision(1)
+                 << pm25_value << "\n";
         }
     }
 
